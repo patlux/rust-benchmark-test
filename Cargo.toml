@@ -7,6 +7,12 @@ edition = "2018"
 [lib]
 name = "grid"
 path = "src/lib.rs"
+bench = false
+
+[[bin]]
+name = "rust-benachmarkt-test"
+path = "src/main.rs"
+bench = false
 
 [dev-dependencies]
 criterion = "0.3"

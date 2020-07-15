@@ -6,12 +6,12 @@ on:
 
 jobs:
   benchmark:
-    name: Run Rust benchmark example
+    name: Run Rust benchmark
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Run benchmark
-        run: cargo bench | tee benches/output.txt
+        run: cargo bench -- --output-format bencher | tee benches/output.txt
       - name: Store benchmark result
         uses: rhysd/github-action-benchmark@v1
         with:
