@@ -1,0 +1,18 @@
+[package]
+name = "rust-benchmark-test"
+version = "0.1.0"
+authors = ["Patrick Wozniak <email@patwoz.de>"]
+edition = "2018"
+
+[lib]
+name = "grid"
+path = "src/lib.rs"
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "loop"
+harness = false
+
+[dependencies]
